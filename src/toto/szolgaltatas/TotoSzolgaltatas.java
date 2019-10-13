@@ -10,6 +10,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.text.SimpleDateFormat;
 
 public class TotoSzolgaltatas {
 
@@ -50,7 +51,7 @@ public class TotoSzolgaltatas {
                 }
                 fajl.add(sor);
                 ++j;
-            }
+        }
 
         } catch(FileNotFoundException ex) {
                     System.err.printf("Hiba: %s", ex.getMessage());
@@ -61,10 +62,8 @@ public class TotoSzolgaltatas {
                     }               
                 
                  }
-             }
-        
-
-    public List<Fordulo> getFajl() {
+    
+        public List<Fordulo> getFajl() {
         return fajl;
     }
 
