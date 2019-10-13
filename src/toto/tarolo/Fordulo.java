@@ -1,18 +1,18 @@
 package toto.tarolo;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Fordulo {
-
-    private int ev;
+    
+        private int ev;
     private int het;
     private int forduloAHeten;
-    private LocalDate datum;
-
-    public Fordulo() {
-
-    }
+    private Date datum;
+    private List<Talalat> talalatok=new ArrayList();
+    private List<String> eredmenyek=new ArrayList();
 
     public int getEv() {
         return ev;
@@ -38,29 +38,33 @@ public class Fordulo {
         this.forduloAHeten = forduloAHeten;
     }
 
-    public LocalDate getDatum() {
+    public Date getDatum() {
         return datum;
     }
 
-    public void setDatum(LocalDate datum) {
+    public void setDatum(Date datum) {
         this.datum = datum;
     }
 
     public List<Talalat> getTalalatok() {
-        List<Talalat> Lista = null;
-        return Lista;
+        return talalatok;
     }
 
-    public void setTalalatok() {
-
+    public void setTalalatok(int a, int b) {
+        Talalat pont=new Talalat(a,b);
+        
+        this.talalatok.add(pont);
     }
 
-    public List<Eredmeny> getEredmenyek() {
-        List<Eredmeny> Lista = null;
-        return Lista;
+    public List<String> getEredmenyek() {
+        return eredmenyek;
     }
 
-    public void setEredmenyek() {
-
+    public void setEredmenyek(String tipp) {
+        this.eredmenyek.add(tipp);
     }
+
 }
+
+    
+    
